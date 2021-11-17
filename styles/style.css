@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f3;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #f0f0f3;
+    box-shadow: 10px 10px 21px #d3d3d6,
+                -10px -10px 21px #fff;
+    padding: 70px;
+    border-radius: 50px;
+}
+
+.title {
+    padding-bottom: 25px;
+    font-size: 42px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    padding-bottom: 10px;
+    color: #1e1b1b;
+}
+
+input, textarea, select {
+    background-color: #f0f0f3;
+    font-size: 16px;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: transparent;
+}
+
+textarea {
+    outline: none;
+    padding: 10px 0 0 10px;
+    font-family: 'Rubik', sans-serif;
+}
+
+textarea::placeholder {
+    font-size: 14px;
+}
+
+select {
+    background-color: #f0f0f3;
+}
+
+.form-input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 5px 0;
+    margin-bottom: 15px;
+}
+
+.check:valid {
+    background-color: rgba(41, 255, 0, 0.08);
+    background-image: url("../img/check.png"); /* Если правильно внесли данные, показывает галочку */
+    background-size: 23px;
+    background-repeat: no-repeat;
+    background-position: right;
+    transition: .5s ease;
+}
+
+.btn {
+    padding: 10px 0;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #39b3dc;
+    border: 1px solid #333;
+    outline: none;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #6fceee;
+}
+
+.btn:active {
+    background-color: #1c6d83;
+}
+
+.captcha-block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+/*Модальное окно*/
+
+.modal {
+    /*display: none;*/
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    width: 40%;
+    /*height: 40%;*/
+    margin: 15% auto;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+}
+
+.modal-content div {
+    text-align: center;
+}
+
+.modal-paragraph {
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.modal-img {
+    width: 150px;
+    height: 150px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 700;
+    transition: .4s ease;
+}
+
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s ease;
+}
